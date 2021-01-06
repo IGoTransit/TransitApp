@@ -451,7 +451,7 @@ public class UserPanelController implements Initializable {
 			taps.add(tap);
 		}
 
-		ArrayList<Trip> trips = admin.getTrips(this.tripCard, taps, admin.getTransitSystem());
+		ArrayList<Trip> trips = Admin.getTrips(this.tripCard, taps, admin.getTransitSystem());
 		double fee = 0;
 		for (Trip trip : trips) {
 			fee = fee + trip.getTripFee();
@@ -468,7 +468,7 @@ public class UserPanelController implements Initializable {
 			Tap tap = new Tap(action, station, transportation, tmpTime, routeName);
 			tapsLst.getItems().add(tap);
 			taps.add(tap);
-			ArrayList<Trip> trips2 = admin.getTrips(this.tripCard, taps, admin.getTransitSystem());
+			ArrayList<Trip> trips2 = Admin.getTrips(this.tripCard, taps, admin.getTransitSystem());
 			double fee2 = 0;
 			for (Trip trip : trips2) {
 				fee2 = fee2 + trip.getTripFee();

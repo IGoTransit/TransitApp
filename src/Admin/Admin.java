@@ -222,7 +222,7 @@ public class Admin extends Monitor {
      * @return
      */
     
-    public static ArrayList<Trip> getTrips(Card card, ArrayList<Tap> taps, Admin admin, TransitSystem tranSys) {
+    public static ArrayList<Trip> getTrips(Card card, ArrayList<Tap> taps, TransitSystem tranSys) {
     	TapQueue queue = new TapQueue();
     	ArrayList<Trip> trips = new ArrayList<>();
     	
